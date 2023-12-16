@@ -15,9 +15,10 @@ export default defineConfig({
   ],
   use: {
     baseURL: 'https://demo.nopcommerce.com',
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
   },
 
 });
