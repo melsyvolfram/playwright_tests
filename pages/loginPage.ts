@@ -15,17 +15,12 @@ export class LoginPage {
   }
 
   async open() {
-    const headerComponent = new HeaderComponent(this.page);
-    await headerComponent.login.click();
+    const header = new HeaderComponent(this.page);
+    await header.login.click();
     await expect(this.page).toHaveURL('/login?returnUrl=%2F');
   }
 
-  async loginWithValidData() {
-    // TODO: import data from another file
-    const user = {
-      email: 'test5@test.com',
-      password: '123456'
-    };
+  async loginWithValidData(user) {
     await this.fillRequiredFields(user);
     await this.button_login.click();
     await expect(this.page).toHaveURL('/');

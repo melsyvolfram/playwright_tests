@@ -10,10 +10,10 @@ export class ActionsComponent {
     this.button_add_to_cart = page.locator('.product-box-add-to-cart-button');
   }
 
-  async addToCart() {
-    const notificationsComponent = new NotificationsComponent(this.page);
-    await this.button_add_to_cart.first().click();
-    await notificationsComponent.alertSuccess();
+  async addToCart(productNumber: number) {
+    await this.button_add_to_cart.nth(productNumber - 1).click();
+    const notifications = new NotificationsComponent(this.page);
+    await notifications.alertSuccess();
   }
 
 }
