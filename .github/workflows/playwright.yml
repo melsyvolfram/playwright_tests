@@ -1,6 +1,9 @@
 name: Playwright Tests
 on:
   pull_request
+env:
+  WORKERS: ${{ vars.WORKERS }}
+  BASE_URL: ${{ vars.BASE_URL }}
 jobs:
   test:
     timeout-minutes: 60
