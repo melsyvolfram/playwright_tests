@@ -1,0 +1,23 @@
+{
+  "name": "playwright_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melsyvolfram/playwright_tests.git"
+  },
+  "keywords": [],
+  "author": "Mariia Deriabina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melsyvolfram/playwright_tests/issues"
+  },
+  "homepage": "https://github.com/melsyvolfram/playwright_tests#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.4"
+  }
+}
