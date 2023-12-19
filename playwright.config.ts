@@ -23,7 +23,7 @@ export default defineConfig({
     timeout: 6000,
   },
   use: {
-    baseURL: process.env.BASE_URL || 'https://demo.nopcommerce.com',
+    baseURL: process.env.BASE_URL || 'https://test-demo.nopcommerce.com',
     headless: true,
     viewport: { width: 1280, height: 720 },
     trace: 'on-first-retry',
