@@ -4,7 +4,8 @@ export default defineConfig({
 
   testDir: './tests',
   fullyParallel: true,
-  workers: 3,
+  forbidOnly: !!process.env.CI,
+  workers: process.env.WORKERS || 3,
   reporter: [
     [
       'html',
@@ -17,12 +18,12 @@ export default defineConfig({
       'dot'
     ]
   ],
-  timeout: 60000,
+  timeout: process.env.CI ? 30000 : 60000,
   expect: {
     timeout: 6000,
   },
   use: {
-    baseURL: 'https://demo.nopcommerce.com',
+    baseURL: process.env.BASE_URL || 'https://demo.nopcommerce.com',
     headless: true,
     viewport: { width: 1280, height: 720 },
     trace: 'on-first-retry',
