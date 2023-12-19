@@ -7,7 +7,7 @@ import { AddressesPage } from '../pages/addressesPage';
 import { ActionsComponent } from '../components/actions';
 import { UserFactory } from '../factories/user';
 
-test.only('User Signup and Checkout', async ({ page }) => {
+test('User Signup and Checkout', async ({ page }) => {
 
   const userFactory = new UserFactory();
   const user = userFactory.build({});
