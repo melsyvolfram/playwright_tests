@@ -46,6 +46,7 @@ export class CartPage {
     await expect(this.product_quantity.nth(productNumber - 1)).toHaveValue(String(expectedQuantity));
   }
 
+  // TODO: maybe create helper for Number(priceString.replace('$', '')) and other similar processings
   async checkProductPrice(productNumber: number, expectedPrice: number) {
     const actualPriceString = await this.product_price.nth(productNumber - 1).innerText();
     const actualPrice = Number(actualPriceString.replace('$', ''));

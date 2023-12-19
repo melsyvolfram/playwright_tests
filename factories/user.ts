@@ -15,7 +15,7 @@ export class UserFactory {
       country: (user.country !== undefined ? user.country : 'Germany'),
       city: (user.city !== undefined ? user.city : 'Berlin'),
       address1: (user.address1 !== undefined ? user.address1 : 'Street 1'),
-      zip_postal_code: (user.zip_postal_code !== undefined ? user.zip_postal_code : '11111'),
+      zipPostalCode: (user.zipPostalCode !== undefined ? user.zipPostalCode : '11111'),
       phone: (user.phone !== undefined ? user.phone : faker.phone.number()),
     }
   }

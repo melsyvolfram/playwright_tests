@@ -15,7 +15,7 @@ export default defineConfig({
       }
     ],
     [
-      'dot'
+      'list'
     ]
   ],
   timeout: process.env.CI ? 30000 : 60000,

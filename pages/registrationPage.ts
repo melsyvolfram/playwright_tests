@@ -14,16 +14,13 @@ export class RegistrationPage {
 
   constructor(page: Page) {
     this.page = page;
-
     this.first_name = page.locator('#FirstName');
     this.last_name = page.locator('#LastName');
     this.email = page.locator('#Email');
     this.password = page.locator('#Password');
     this.confirm_password = page.locator('#ConfirmPassword');
-
     this.button_register = page.locator('#register-button');
     this.button_continue = page.locator('.register-continue-button');
-
     this.result = page.locator('.result');
   }
 

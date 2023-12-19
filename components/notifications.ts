@@ -12,9 +12,12 @@ export class NotificationsComponent {
   }
 
   async alertSuccess() {
+    // TODO: stabilize this method, because the test often fails here
     await expect(this.success).toBeVisible();
     await this.close.click();
     await expect(this.success).toBeHidden();
   }
+
+  // TODO: add check alertError()
 
 }

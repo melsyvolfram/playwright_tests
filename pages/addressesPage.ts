@@ -41,7 +41,7 @@ export class AddressesPage {
     await this.country.selectOption(user.country);
     await this.city.fill(user.city);
     await this.address1.fill(user.address1);
-    await this.zip_postal_code.fill(user.zip_postal_code);
+    await this.zip_postal_code.fill(user.zipPostalCode);
     await this.phone.fill(user.phone);
   }
 
