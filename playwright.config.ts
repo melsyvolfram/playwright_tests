@@ -5,7 +5,7 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  workers: process.env.WORKERS || 3,
+  workers: process.env.WORKERS ? Number(process.env.WORKERS) : 3,
   reporter: [
     [
       'html',
