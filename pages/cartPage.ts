@@ -16,7 +16,7 @@ export class CartPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.product_item = page.locator('.cart tr .product-name');
+    this.product_item = page.locator('.cart tbody tr');
     this.product_name = page.locator('.cart tr .product-name');
     this.product_quantity = page.locator('.cart tr .qty-input');
     this.product_price = page.locator('.cart tr .product-unit-price');
